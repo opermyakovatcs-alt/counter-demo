@@ -1,0 +1,17 @@
+{
+    "$schema": "../../node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+    "mutate": ["libs/counter-lib/src/lib/counter-lib/counter-lib.ts", "!libs/counter-lib/src/lib/counter-lib/counter-lib.spec.ts", "!src/test-setup.ts"],
+    "testRunner": "command",
+    "commandRunner": {
+        "command": "NODE_OPTIONS=--max-old-space-size=2560 npx jest --config=libs/counter-lib/jest.config.cts --watch=false --bail --runInBand"
+    },
+    "concurrency": 4,
+    "reporters": ["progress", "clear-text", "html", "json"],
+    "htmlReporter": {
+        "fileName": "reports/mutation/counter-lib/mutation.html"
+    },
+    "jsonReporter": {
+        "fileName": "reports/mutation/counter-lib/mutation.json"
+    },
+    "cleanTempDir": true
+}
