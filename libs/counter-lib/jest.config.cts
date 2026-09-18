@@ -1,6 +1,7 @@
 module.exports = {
   displayName: 'counter-lib',
   preset: '../../jest.preset.js',
+  testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../coverage/libs/counter-lib',
   transform: {
