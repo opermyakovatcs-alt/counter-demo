@@ -4,7 +4,6 @@
     "mutate": [
         "src/lib/counter-lib/counter-lib.ts",
         "!src/lib/counter-lib/counter-lib.spec.ts",
-        "!apps/counter-app-e2e/src/example.spec.ts",
         "!src/test-setup.ts"
     ],
     "coverageAnalysis": "perTest",
@@ -17,10 +16,10 @@
         "json"
     ],
     "htmlReporter": {
-        "fileName": "reports/mutation/counter-lib/mutation.html"
+        "fileName": "../../reports/mutation/counter-lib/mutation.html"
     },
     "jsonReporter": {
-        "fileName": "reports/mutation/counter-lib/mutation.json"
+        "fileName": "../../reports/mutation/counter-lib/mutation.json"
     },
     "cleanTempDir": true
 }
